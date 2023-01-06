@@ -16,10 +16,11 @@ app.use(xss());
 app.use((req, res, next) => {
     return res.status(404).send();
   });
-  
+
+  app.get('/consume', async (req, res, next) => {await (startKafkaConsumer()).then(res =>{console.log(res)})});
   // Create HTTP Server and Listen for Requests
   app.listen(5010, async (req, res) => {
     // Start Kafka consumer
-    await startKafkaConsumer();
+    await startKafkaConsumer()
   });
   

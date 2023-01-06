@@ -4,7 +4,7 @@
   "description": "GIU Software Project Shop API & Kafka Producer",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon index.js"
   },
   "dependencies": {
     "@hapi/joi": "17.1.1",
